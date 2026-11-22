@@ -1,0 +1,567 @@
+
+/* ========================================
+   PINOYDEX - MODERN MARINE DESIGN
+======================================== */
+
+:root {
+    --navy: #062b43;
+    --navy-light: #0b405b;
+    --ocean: #087e9b;
+    --teal: #12b8b0;
+    --aqua: #dff7f5;
+    --background: #f3f8fb;
+    --white: #ffffff;
+    --text: #17384b;
+    --muted: #718795;
+    --border: #e3edf2;
+    --shadow: 0 12px 35px rgba(6, 43, 67, 0.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+    background: var(--background);
+    line-height: 1.6;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    min-height: 78px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 3px 18px rgba(6, 43, 67, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: 800;
+    color: var(--navy);
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--teal);
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.navbar nav a:hover {
+    color: var(--teal);
+}
+
+.admin-link {
+    background: var(--navy);
+    color: white !important;
+    padding: 10px 19px;
+    border-radius: 8px;
+}
+
+.admin-link:hover {
+    background: var(--ocean);
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    padding: 90px 10%;
+    color: white;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 31, 49, 0.94),
+            rgba(3, 69, 91, 0.65),
+            rgba(3, 69, 91, 0.15)
+        ),
+        url("../images/reef.jpg") center/cover no-repeat,
+        #075b7b;
+}
+
+.hero-content {
+    max-width: 720px;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: #6ce9dc;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 620px;
+    color: #e0f3f7;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--teal);
+    color: var(--navy);
+    text-decoration: none;
+    border-radius: 9px;
+    font-weight: 800;
+    transition: 0.25s;
+    box-shadow: 0 8px 22px rgba(18, 184, 176, 0.25);
+}
+
+.explore-btn:hover {
+    background: #65e5d8;
+    transform: translateY(-3px);
+}
+
+/* INTRODUCTION */
+
+.intro {
+    max-width: 950px;
+    margin: auto;
+    padding: 90px 25px;
+    text-align: center;
+}
+
+.intro h2 {
+    color: var(--navy);
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.intro p:last-child {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* GENERAL SECTION STYLES */
+
+section {
+    scroll-margin-top: 95px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+/* BUTTONS */
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* CARDS */
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(6, 43, 67, 0.13);
+}
+
+/* FOOTER */
+
+footer {
+    padding: 35px 20px;
+    text-align: center;
+    background: var(--navy);
+    color: #d6e8ef;
+    font-size: 14px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .navbar nav {
+        gap: 17px;
+    }
+
+    .hero {
+        padding: 80px 7%;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        position: relative;
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px 15px;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 65px 25px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .intro {
+        padding: 65px 22px;
+    }
+
+    .intro h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero h1 {
+        font-size: 33px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+}
+
+/* PINOYDEX NAVIGATION */
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    padding: 0 7.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-bottom: 1px solid #edf1f4;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    display: inline-block;
+    flex-shrink: 0;
+    margin: 0;
+    font-size: 29px;
+    font-weight: 800;
+    color: #073b5c;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navbar .logo span {
+    color: #00a6c7;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
+    margin: 0;
+}
+
+.navbar nav a {
+    color: #24475d;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #00a6c7;
+}
+
+.navbar nav .admin-link {
+    color: #24475d !important;
+    background: transparent;
+    padding: 0;
+}
+
+.navbar nav .admin-link:hover {
+    color: #00a6c7 !important;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        padding: 18px 15px;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px 22px;
+    }
+}
+
+/* NAVIGATION BAR EFFECTS */
+
+.navbar nav a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Animated underline */
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 3px;
+    background: #12b8b0;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+/* Hover effect */
+.navbar nav a:hover {
+    color: #12b8b0;
+    transform: translateY(-3px);
+}
+
+.navbar nav a:hover::after {
+    width: 100%;
+}
+
+/* Click feedback */
+.navbar nav a:active {
+    transform: scale(0.94);
+}
+
+/* Keyboard accessibility */
+.navbar nav a:focus-visible {
+    outline: 2px solid #12b8b0;
+    outline-offset: 6px;
+    border-radius: 3px;
+}
+
+/* Active page */
+.navbar nav a.active {
+    color: #12b8b0;
+}
+
+.navbar nav a.active::after {
+    width: 100%;
+}
+
+/* CORAL REEF BACKGROUND - SPECIES PAGE */
+
+body:has(.directory) {
+    background:
+        linear-gradient(
+            rgba(3, 35, 55, 0.65),
+            rgba(3, 35, 55, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1582623838120-455da222cdc7?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Keep content readable over the reef background */
+
+.directory {
+    background: transparent;
+}
+
+.filters,
+.species-card,
+.empty {
+    background: rgba(255, 255, 255, 0.96);
+}
+
+/* CORAL REEF BACKGROUND - SPECIES PAGE */
+
+body:has(.directory) {
+    background:
+        linear-gradient(
+            rgba(3, 35, 55, 0.65),
+            rgba(3, 35, 55, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1582623838120-455da222cdc7?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Keep content readable over the reef background */
+
+.directory {
+    background: transparent;
+}
+
+.filters,
+.species-card,
+.empty {
+    background: rgba(255, 255, 255, 0.96);
+}
+
+/* FIX SPECIES PAGE HEADING COLORS */
+
+main.directory > h1 {
+    color: #ffffff !important;
+    font-size: 32px;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+main.directory > p {
+    color: #eafaff !important;
+    font-size: 16px;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+}
+
+/* Search result text */
+.result-summary,
+.result-summary p {
+    color: #ffffff !important;
+}
+
+/* HOMEPAGE CORAL REEF BACKGROUND */
+
+.home-hero {
+    position: relative;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background-image:
+        url("https://www.actu-environnement.com/images/illustrations/breve/35347_large.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(3, 28, 48, 0.88),
+        rgba(3, 45, 65, 0.48)
+    );
+}
+
+.home-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    padding: 80px 7%;
+    color: white;
+}
+
+.home-hero .hero-content h1 {
+    color: #ffffff;
+    max-width: 750px;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.home-hero .hero-description {
+    color: #e7f8fc;
+    max-width: 600px;
+}
+
+.home-hero .eyebrow {
+    color: #8ef3e8;
+}
